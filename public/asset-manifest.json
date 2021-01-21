@@ -1,0 +1,40 @@
+{
+  "files": {
+    "main.css": "/static/css/main.be63dabe.chunk.css",
+    "main.js": "/static/js/main.34218da6.chunk.js",
+    "main.js.map": "/static/js/main.34218da6.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.b9783ef0.js",
+    "runtime-main.js.map": "/static/js/runtime-main.b9783ef0.js.map",
+    "static/css/2.acc986e7.chunk.css": "/static/css/2.acc986e7.chunk.css",
+    "static/js/2.2f807d6f.chunk.js": "/static/js/2.2f807d6f.chunk.js",
+    "static/js/2.2f807d6f.chunk.js.map": "/static/js/2.2f807d6f.chunk.js.map",
+    "static/js/3.9273e6c4.chunk.js": "/static/js/3.9273e6c4.chunk.js",
+    "static/js/3.9273e6c4.chunk.js.map": "/static/js/3.9273e6c4.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.acc986e7.chunk.css.map": "/static/css/2.acc986e7.chunk.css.map",
+    "static/css/main.be63dabe.chunk.css.map": "/static/css/main.be63dabe.chunk.css.map",
+    "static/js/2.2f807d6f.chunk.js.LICENSE.txt": "/static/js/2.2f807d6f.chunk.js.LICENSE.txt",
+    "static/media/App.scss": "/static/media/Nunito-Regular.e4eb7682.ttf",
+    "static/media/Player.scss": "/static/media/PlayerSvg2.85dd2fa6.gif",
+    "static/media/adi.8e3507bf.jpeg": "/static/media/adi.8e3507bf.jpeg",
+    "static/media/equalizer.82654f6b.gif": "/static/media/equalizer.82654f6b.gif",
+    "static/media/github.1be3365d.svg": "/static/media/github.1be3365d.svg",
+    "static/media/hero1.f11f9c64.jpg": "/static/media/hero1.f11f9c64.jpg",
+    "static/media/hero2.d97f4303.jpg": "/static/media/hero2.d97f4303.jpg",
+    "static/media/hero3.2a5043c9.jpg": "/static/media/hero3.2a5043c9.jpg",
+    "static/media/hero4.bd768973.jpg": "/static/media/hero4.bd768973.jpg",
+    "static/media/hero5.144e3867.jpg": "/static/media/hero5.144e3867.jpg",
+    "static/media/jukeBox.9ef99c27.svg": "/static/media/jukeBox.9ef99c27.svg",
+    "static/media/linkedin.6c32ad69.svg": "/static/media/linkedin.6c32ad69.svg",
+    "static/media/styles.css": "/static/media/revicons.e8746a62.woff",
+    "static/media/upload.cb512b27.svg": "/static/media/upload.cb512b27.svg",
+    "static/media/user.c2fc30b5.svg": "/static/media/user.c2fc30b5.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b9783ef0.js",
+    "static/css/2.acc986e7.chunk.css",
+    "static/js/2.2f807d6f.chunk.js",
+    "static/css/main.be63dabe.chunk.css",
+    "static/js/main.34218da6.chunk.js"
+  ]
+}
