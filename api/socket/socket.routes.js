@@ -31,17 +31,23 @@ io.on('connection', (socket) => {
     console.log('connected ', socket.id);
     socket.emit('get data')
     socket.on('got data', ({ user, boxId }) => {
-        socket.join(boxId)
+        if (socket.currBox) {
+            if (socket.currBox === boxId) return
+            leaveBox(socket, io, user, boxId)
+        }
+        socket.currBox = boxId
+        socket.join(socket.currBox)
         const boxStatus = getBoxStatus(boxId)
         const userInBox = boxStatus.userList.find(u => u._id === user._id)
         console.log(boxStatus.userList.length);
+
         if (boxStatus.userList.length === 0) {
             socket.emit('set song')
         } else {
             socket.emit('set song', boxMap[boxId].currSong)
         }
         if (!userInBox) {
-            boxStatus.userList.push({ username: user.username, _id: user._id })
+            boxStatus.userList.push({ username: user.username, _id: user._id, imgUrl: user.imgString })
         }
         boxMap[boxId] = boxStatus
         console.log({ boxMap });
@@ -50,16 +56,15 @@ io.on('connection', (socket) => {
             socket.broadcast.to(box._id).emit('user is typing', username)
         })
         socket.on('update song', (song) => {
-            boxMap[boxId].currSong = song
-            socket.broadcast.to(boxId).emit('set song', boxMap[boxId].currSong)
+            socket.broadcast.to(socket.currBox).emit('set song', song)
         })
         socket.on('get song', () => {
             socket.broadcast.to(boxId).emit('got song', boxMap[boxId].currSong)
         })
 
-        socket.on('user left', (user) => {
-            leaveBox(socket, io, user, boxId)
-        })
+        // socket.on('user left', (user) => {
+        //     leaveBox(socket, io, user, boxId)
+        // })
     })
     socket.on('sendMsg', (data) => {
         box = data.currBox
