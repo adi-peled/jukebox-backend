@@ -16,7 +16,6 @@
     "express-session": "^1.17.1",
     "jsonwebtoken": "^8.5.1",
     "mongodb": "^3.2.7",
-    "nodemailer": "^6.4.13",
     "socket.io": "^3.0.5"
   },
   "devDependencies": {},
