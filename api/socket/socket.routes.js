@@ -129,8 +129,8 @@ io.on('connection', (socket) => {
             socket.broadcast.to(socket.currBoxId).emit('set song', song)
         })
         socket.on('update sec', sec => {
-            console.log('update sec from player', sec);
             boxMap[socket.currBoxId].currSong.secPlayed = sec
+            
         })
         socket.on('get song', () => {
             socket.broadcast.to(boxId).emit('got song', boxMap[boxId].currSong)
