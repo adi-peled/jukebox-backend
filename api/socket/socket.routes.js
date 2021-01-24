@@ -112,6 +112,7 @@ io.on('connection', (socket) => {
             socket.emit('set song')
 
         } else {
+            console.log('send sec from backend to deatils,', boxMap[socket.currBoxId].currSong.secPlayed);
             socket.emit('set song', boxMap[socket.currBoxId].currSong)
         }
         if (!userInBox) {
@@ -124,9 +125,12 @@ io.on('connection', (socket) => {
             socket.broadcast.to(box._id).emit('user is typing', username)
         })
         socket.on('update song', song => {
-            console.log(socket.currBoxId);
             boxMap[socket.currBoxId].currSong = song
             socket.broadcast.to(socket.currBoxId).emit('set song', song)
+        })
+        socket.on('update sec', sec => {
+            console.log('update sec from player', sec);
+            boxMap[socket.currBoxId].currSong.secPlayed = sec
         })
         socket.on('get song', () => {
             socket.broadcast.to(boxId).emit('got song', boxMap[boxId].currSong)
