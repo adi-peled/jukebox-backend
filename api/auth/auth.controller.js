@@ -2,7 +2,6 @@ const authService = require('./auth.service')
 const userService = require('../user/user.service')
 const logger = require('../../services/logger.service')
 const jwt = require('jsonwebtoken')
-const nodemailer = require("nodemailer");
 require('dotenv').config()
 
 
