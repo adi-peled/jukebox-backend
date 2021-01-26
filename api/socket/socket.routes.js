@@ -59,10 +59,6 @@ io.on('connection', (socket) => {
         socket.on('get song', () => {
             socket.broadcast.to(boxId).emit('got song', boxMap[boxId].currSong)
         })
-        socket.on('user leave', user => {
-            console.log({ user });
-            leaveBox(socket, io, user)
-        })
         socket.on('disconnect', () => {
             leaveBox(socket, io, user)
         })
