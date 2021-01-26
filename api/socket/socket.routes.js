@@ -63,6 +63,9 @@ io.on('connection', (socket) => {
             console.log({ user });
             leaveBox(socket, io, user)
         })
+        socket.on('disconnect', () => {
+            leaveBox(socket, io, user)
+        })
     })
     socket.on('sendMsg', ({ currBox }) => {
         io.to(currBox._id).emit('msgSent')
