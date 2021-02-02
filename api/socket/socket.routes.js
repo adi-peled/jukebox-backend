@@ -63,8 +63,8 @@ io.on('connection', (socket) => {
             leaveBox(socket, io, user)
         })
     })
-    socket.on('sendMsg', ({ currBox }) => {
-        io.to(currBox._id).emit('msgSent')
+    socket.on('sendMsg', box => {
+        io.to(box._id).emit('msgSent', box)
     })
 })
 
